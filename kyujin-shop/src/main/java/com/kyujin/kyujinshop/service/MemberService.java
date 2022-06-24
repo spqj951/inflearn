@@ -3,13 +3,18 @@ package com.kyujin.kyujinshop.service;
 import com.kyujin.kyujinshop.domain.Member;
 import com.kyujin.kyujinshop.repository.MemberRepository;
 import com.kyujin.kyujinshop.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+
 public class MemberService {
 
-    private final MemberRepository memberRepository
+    private final MemberRepository memberRepository;
+
+
 
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
